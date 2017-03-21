@@ -2,7 +2,7 @@ import 'source-map-support/register';
 import 'babel-polyfill';
 import express from 'express';
 import bodyParser from 'body-parser';
-import { graphqlExpress } from 'graphql-server-express';
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import { makeExecutableSchema } from 'graphql-tools';
 
 import resolvers from './resolvers';
@@ -23,5 +23,9 @@ app.post('/graphql',
     schema: executableSchema
   }))
 );
+
+app.use('/graphiql', graphiqlExpress({
+  endpointURL: '/graphql',
+}));
 
 app.listen(8080);
