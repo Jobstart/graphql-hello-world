@@ -1,6 +1,6 @@
 # GraphQL "Hello World"
 
-As seen at [Jobstart.com](https://www.jobstart.com/posts/getting-started-with-graphql)
+As seen at [Jobstart.com](https://www.jobstart.com/posts/graphql-tutorial-getting-started)
 
 ### Running
 
